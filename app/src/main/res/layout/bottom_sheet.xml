@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:background="@color/bottomSheetColor"
+        app:behavior_peekHeight="80dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:id="@+id/dragHandle"
+            android:layout_width="40dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/drag_handle_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnListenSound"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/primaryColor"
+            android:drawableLeft="@drawable/baseline_campaign_24"
+            android:drawableTint="@color/white"
+            android:fontFamily="sans-serif"
+            android:singleLine="true"
+            android:text="Nghe âm thanh"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textIsSelectable="true"
+            android:textSize="14sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dragHandle" />
+
+        <Button
+            android:id="@+id/btnFindDirection"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/primaryColor"
+            android:drawableTint="@color/white"
+            android:drawableLeft="@drawable/baseline_notifications_24"
+            android:singleLine="true"
+            android:text="Tìm đường đi"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btnListenSound"
+            app:layout_constraintTop_toBottomOf="@+id/dragHandle" />
+
+        <ImageButton
+            android:id="@+id/btnCallChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="32dp"
+            style="@style/CircularImageButton"
+            android:contentDescription="Phone icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnListenSound"
+            app:srcCompat="@drawable/button_call" />
+
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuộc gọi"
+            android:textColor="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="@+id/btnCallChild"
+            app:layout_constraintHorizontal_bias="0.411"
+            app:layout_constraintStart_toStartOf="@+id/btnCallChild"
+            app:layout_constraintTop_toBottomOf="@+id/btnCallChild" />
+
+        <ImageButton
+            android:id="@+id/btnLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="32dp"
+            style="@style/CircularImageButton"
+            android:contentDescription="Location icon"
+            app:layout_constraintBottom_toBottomOf="@+id/btnCallChild"
+            app:layout_constraintStart_toEndOf="@+id/btnCallChild"
+            app:layout_constraintTop_toBottomOf="@+id/btnListenSound"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/button_location" />
+
+        <TextView
+            android:id="@+id/textLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa điểm"
+            android:textColor="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="@+id/btnLocation"
+            app:layout_constraintStart_toStartOf="@+id/btnLocation"
+            app:layout_constraintTop_toBottomOf="@+id/btnLocation" />
+
+        <ImageButton
+            android:id="@+id/btnHistory"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="56dp"
+            android:contentDescription="History icon"
+            app:layout_constraintBottom_toTopOf="@+id/textLocation"
+            app:layout_constraintStart_toEndOf="@+id/btnLocation"
+            app:layout_constraintTop_toBottomOf="@+id/btnListenSound"
+            app:layout_constraintVertical_bias="1.0"
+            style="@style/CircularImageButton"
+            app:srcCompat="@drawable/button_history" />
+
+        <TextView
+            android:id="@+id/historyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lịch sử"
+            android:textColor="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="@+id/btnHistory"
+            app:layout_constraintStart_toStartOf="@+id/btnHistory"
+            app:layout_constraintTop_toBottomOf="@+id/btnHistory" />
+
+        <ImageButton
+            android:id="@+id/btnSetting"
+            style="@style/CircularImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:contentDescription="Setting icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.455"
+            app:layout_constraintStart_toEndOf="@+id/btnHistory"
+            app:layout_constraintTop_toBottomOf="@+id/btnListenSound"
+            app:srcCompat="@drawable/button_setting" />
+
+        <TextView
+            android:id="@+id/settingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cài đặt"
+            android:textColor="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="@+id/btnSetting"
+            app:layout_constraintStart_toStartOf="@+id/btnSetting"
+            app:layout_constraintTop_toBottomOf="@+id/btnSetting" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/healthyCardView"
+            android:layout_width="347dp"
+            android:layout_height="164dp"
+            android:layout_marginTop="44dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneText" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/timeManagemeCardView"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="20dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/healthyCardView"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thời gian sử dụng thiết bị"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/miniBarChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnSeeDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"
+                    android:text="Xem chi tiết" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme Colors -->
+    <color name="primaryColor">#2196F3</color>
+    <color name="primaryDarkColor">#1976D2</color>
+    <color name="primaryLightColor">#BBDEFB</color>
+    <color name="accentColor">#FF4081</color>
+    
+    <!-- Light Theme Colors -->
+    <color name="backgroundColorLight">#FFFFFF</color>
+    <color name="surfaceColorLight">#F5F5F5</color>
+    <color name="textPrimaryColorLight">#212121</color>
+    <color name="textSecondaryColorLight">#757575</color>
+    
+    <!-- Dark Theme Colors -->
+    <color name="backgroundColorDark">#121212</color>
+    <color name="surfaceColorDark">#1E1E1E</color>
+    <color name="textPrimaryColorDark">#FFFFFF</color>
+    <color name="textSecondaryColorDark">#B3FFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="successColor">#4CAF50</color>
+    <color name="warningColor">#FFC107</color>
+    <color name="errorColor">#F44336</color>
+
+    <!-- Background Colors -->
+    <color name="backgroundColor">#121212</color>
+    <color name="surfaceColor">#1E1E1E</color>
+
+    <!-- Text Colors -->
+    <color name="textPrimaryColor">#FFFFFF</color>
+    <color name="textSecondaryColor">#B3FFFFFF</color>
+    <color name="hintColor">#80FFFFFF</color>
+
+    <!-- Social Media Colors -->
+    <color name="facebookColor">#1877F2</color>
+    <color name="gmailColor">#EA4335</color>
+
+    <!-- Standard Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="teal_200">#80CBC4</color>
+    <color name="teal_700">#00796B</color>
+    <color name="bottomSheetColor">#1E1E1E</color>
+    <color name="secondaryColor">#BDBDBD</color>
+    <color name="bottomNavigationColor">#1E1E1E</color>
+</resources>

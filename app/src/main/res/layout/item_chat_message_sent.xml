@@ -1,0 +1,40 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:gravity="end">
+
+        <!-- TextView to show sender's name -->
+        <TextView
+            android:id="@+id/senderNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondaryColor"
+            android:textStyle="bold"
+            tools:text="Sender Name" />
+
+        <ImageView
+            android:id="@+id/messageImageView"
+            android:layout_width="150dp"
+            android:layout_height="225dp"
+            android:visibility="gone"
+            android:src="@drawable/loginbkg"  />
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sent_message_background"
+            android:padding="8dp"
+            android:textColor="#f5f5f5"
+            tools:text="Sent message text" />
+
+    </LinearLayout>
+
+</layout>
